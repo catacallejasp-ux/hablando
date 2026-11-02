@@ -5811,40 +5811,7 @@ await compartir(idea)</pre>`],[`solid`,`4 / span 1 / 2`,`Experiencia`,`<strong c
         </article>
         ${vu.map((e,n)=>Su(e,n,t(n))).join(``)}
       </div>
-    `}},Eu=[`<strong>Tú sabes algo que otras personas no</strong> (y viceversa).`,`Piensa en tu público como lo que son: <strong>personas igual que tú.</strong>`,`Confía en ti, tu equipo, tu trabajo y tus habilidades. <strong>Es normal sentir miedo o nervios; no te dejes paralizar por él.</strong>`,`<strong>Hazlo; sin miedo al éxito</strong>`],Du=(e,t)=>{let n=e.querySelector(`.ball`),r=e.querySelectorAll(`.pane`),i=r[Math.max(t,0)],a=n.offsetWidth,o=i.offsetTop-a;return t<0?{x:r[0].offsetLeft-a*4,y:o-a*5}:{x:i.offsetLeft+i.offsetWidth/2-a/2,y:o}},Ou=({x:e,y:t})=>`translate(${e}px, ${t}px)`,ku=(e,t,n,r=0)=>{let i=[];for(let r=0;r<=16;r++){let a=r/16;i.push({transform:Ou({x:e.x+(t.x-e.x)*a,y:e.y+(t.y-e.y)*a-4*n*a*(1-a)})})}for(let e=1;e<=r;e++){let r=n*.22**e;for(let e=1;e<=6;e++){let n=e/6;i.push({transform:Ou({x:t.x,y:t.y-4*r*n*(1-n)})})}}return i},Au=({root:e,step:t})=>{let n=e.querySelector(`.bridge`),r=n.querySelector(`.ball`),i=t-1,a=n.dataset.at===void 0?null:Number(n.dataset.at);n.dataset.at=i,n.classList.toggle(`is-done`,t===Eu.length),r.classList.toggle(`is-in`,i>=0);let o=()=>{r.style.transform=Ou(Du(n,Number(n.dataset.at)))};n.dataset.watched||(n.dataset.watched=`1`,new ResizeObserver(o).observe(n)),r.getAnimations().forEach(e=>e.cancel());let s=Du(n,i);if(r.style.transform=Ou(s),a===null||a===i||matchMedia(`(prefers-reduced-motion: reduce)`).matches)return;let c=Du(n,a),l=r.offsetWidth,u=a<0&&i===0;r.animate(ku(c,s,u?l*1.5:l*3.5,u?2:+(i>a)),{duration:u?1100:800,easing:`linear`})},ju=[`práctica`,`+`,`voz`,`pausa`,`×`,`historia`,`= confianza`,`público`,`(calma)²`,`mirada`,`√nervios`,`+ empatía`,`?`,`respira`],Mu=[{id:`hola`,title:`Hola, soy Cata`,scene:`drift`,sceneOpacity:.8,steps:5,layout:`center`,chrome:!1,html:`
-      <div class="hola__glow" data-step="1" data-motion="fade" aria-hidden="true"></div>
-      <div class="hola">
-        \x3C!-- Cata's portrait: hair and shoulders reach past its rounded violet frame -->
-        <img class="hola__photo" src="${Ql}" alt="Ilustración de Cata Callejas: pelo rojo largo, lentes y blusa oscura" data-step="1" data-motion="scale" />
-        <p class="hola__greet" data-step="1" data-delay="150">Hola, soy</p>
-        <h1 class="hola__name" data-step="1" data-motion="mask" data-delay="250">Cata Callejas</h1>
-
-        \x3C!-- The tree: two branches drop from the name, then the third hangs
-             from the bar between them. Each step draws its lines, its dot,
-             then its tag. -->
-        <div class="hola__tree">
-          <div class="hola__branch hola__branch--left" data-step="2" data-motion="none">
-            <span class="ln ln--bar-left"></span>
-            <span class="ln ln--drop-left"></span>
-            <span class="dot dot--left"></span>
-            <span class="hola__tag hola__tag--left">Profesora</span>
-          </div>
-          <div class="hola__branch hola__branch--right" data-step="3" data-motion="none">
-            <span class="ln ln--bar-right"></span>
-            <span class="ln ln--drop-right"></span>
-            <span class="dot dot--right"></span>
-            <span class="hola__tag hola__tag--right">Product Designer</span>
-          </div>
-          <div class="hola__branch hola__branch--center" data-step="4" data-motion="none">
-            <span class="ln ln--mid-left"></span>
-            <span class="ln ln--mid-right"></span>
-            <span class="ln ln--drop-center"></span>
-            <span class="dot dot--center"></span>
-            <span class="hola__tag hola__tag--center">Hago que las cosas pasen</span>
-          </div>
-        </div>
-      </div>
-    `},{id:`cover`,title:`Hablando nuestro trabajo`,scene:`dialogue`,layout:`center`,chrome:!1,blocks:[{at:0,type:`hero`,text:`Hablando
+    `}},Eu=[`<strong>Tú sabes algo que otras personas no</strong> (y viceversa).`,`Piensa en tu público como lo que son: <strong>personas igual que tú.</strong>`,`Confía en ti, tu equipo, tu trabajo y tus habilidades. <strong>Es normal sentir miedo o nervios; no te dejes paralizar por él.</strong>`,`<strong>Hazlo; sin miedo al éxito</strong>`],Du=(e,t)=>{let n=e.querySelector(`.ball`),r=e.querySelectorAll(`.pane`),i=r[Math.max(t,0)],a=n.offsetWidth,o=i.offsetTop-a;return t<0?{x:r[0].offsetLeft-a*4,y:o-a*5}:{x:i.offsetLeft+i.offsetWidth/2-a/2,y:o}},Ou=({x:e,y:t})=>`translate(${e}px, ${t}px)`,ku=(e,t,n,r=0)=>{let i=[];for(let r=0;r<=16;r++){let a=r/16;i.push({transform:Ou({x:e.x+(t.x-e.x)*a,y:e.y+(t.y-e.y)*a-4*n*a*(1-a)})})}for(let e=1;e<=r;e++){let r=n*.22**e;for(let e=1;e<=6;e++){let n=e/6;i.push({transform:Ou({x:t.x,y:t.y-4*r*n*(1-n)})})}}return i},Au=({root:e,step:t})=>{let n=e.querySelector(`.bridge`),r=n.querySelector(`.ball`),i=t-1,a=n.dataset.at===void 0?null:Number(n.dataset.at);n.dataset.at=i,n.classList.toggle(`is-done`,t===Eu.length),r.classList.toggle(`is-in`,i>=0);let o=()=>{r.style.transform=Ou(Du(n,Number(n.dataset.at)))};n.dataset.watched||(n.dataset.watched=`1`,new ResizeObserver(o).observe(n)),r.getAnimations().forEach(e=>e.cancel());let s=Du(n,i);if(r.style.transform=Ou(s),a===null||a===i||matchMedia(`(prefers-reduced-motion: reduce)`).matches)return;let c=Du(n,a),l=r.offsetWidth,u=a<0&&i===0;r.animate(ku(c,s,u?l*1.5:l*3.5,u?2:+(i>a)),{duration:u?1100:800,easing:`linear`})},ju=[`práctica`,`+`,`voz`,`pausa`,`×`,`historia`,`= confianza`,`público`,`(calma)²`,`mirada`,`√nervios`,`+ empatía`,`?`,`respira`],Mu=[{id:`cover`,title:`Hablando nuestro trabajo`,scene:`dialogue`,layout:`center`,chrome:!1,blocks:[{at:0,type:`hero`,text:`Hablando
 nuestro trabajo`,motion:`mask`},{at:0,type:`lead`,text:`Comunicándonos con clientes, equipos y el mundo`,delay:700}]},{id:`contexto`,title:`Cómo comenzó esta historia`,scene:`drift`,layout:`center`,sceneOpacity:.3,onStep:du,blocks:[{at:0,type:`display`,text:`Cómo comenzó esta *historia*`,motion:`mask`},{at:0,type:`html`,motion:`none`,className:`hilo-wrap`,html:`
           <svg class="hilo" viewBox="0 0 1000 200" aria-hidden="true">
             <defs>
